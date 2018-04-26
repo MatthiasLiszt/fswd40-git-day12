@@ -7,10 +7,9 @@ var fries = { "fries_size": "Large French Fries", "calories": "570" };
 function basicTask1(){
 
  var part1="My favorite sandwich is a "+sandwiches.sandwich+" which has approximately "+sandwiches.calories+ " calories, ";
- var part2="along with it I enjoy eating "+fries["fries_size"]+" which have about "+fries.calories+" calories.";
- return part1+part2;
- console.log('basicTask1 executed');
- //return part1;
+ //var part2="along with it I enjoy eating "+fries.["fries_size"]+" which have about "+fries.calories+" calories.";
+ //return part1+part2;
+ return part1;
 }
 
 //document.write(basicTask1());
