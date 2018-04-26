@@ -4,11 +4,26 @@
 <body>
 <h1>advanced task</h1>
 
+<table id="employeeTab">
+
+</table>
+
 <script>
 fill10employees();
-document.writeln("test "+employees.length+"<br></br>");
-var k=0;
-while(k<10){document.writeln("<p> k = "+k+" "+employees[k].properties.salary.content+"</p>");++k;};
+//document.writeln("test "+employees.length+"<br></br>");
+//var k=0;
+//while(k<10){document.writeln("<p> k = "+k+" "+employees[k].properties.salary.content+"</p>");++k;};
+var tabelle=[];
+var thead="<tr><th>First Name</th><th>Last Name</th><th>Job Title</th><th>Salary</th></tr>";
+var t;
+for(var i=0;i<employees.length;++i)
+ {tabelle.push('<tr><td>'+employees[i].properties.firstName.content+"</td>");
+  tabelle.push("<td>"+employees[i].properties.lastName.content+"</td>");
+  tabelle.push('<td>'+employees[i].properties.jobTitle.content+"</td>");
+  tabelle.push('<td>'+employees[i].properties.salary.content+'</td></tr>');
+ }	
+t=thead+tabelle.join(''); 
+document.getElementById('employeeTab').innerHTML=t;
 </script>
 </body>
 </html>
