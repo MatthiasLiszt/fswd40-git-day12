@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "EmployeeData",
+    "description": "something from Codefactory",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a product",
+            "type": "integer"
+        },
+        "firstName": {
+            "description": "The first name of the employee",
+            "type": "string"
+        },
+        "lastName": {
+            "description": "The last name of the employee",
+            "type": "string"
+        },
+        "email": {
+            "description": "The e-mail address of the employee",
+            "type": "string"
+        },
+        "jobTitle": {
+            "description": "The job title of the employee",
+            "type": "string"
+        },
+        "salary": {
+            "description": "the employee's salary",
+            "type": "number",
+            "minimum": 0,
+            "exclusiveMinimum": true
+        }
+    },
+    "required": ["id","firstName","lastName","email","jobTitle","salary"]
+}
