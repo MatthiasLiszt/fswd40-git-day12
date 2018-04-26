@@ -43,17 +43,22 @@ function fill10employees(){
   var firstname=['Martin',"Linda","Lisa","Patrick","Mario","Ida","Sigfrid","Herbert","Hans","Tanja","Maria"];
   var lastname=['Martin',"Linda","Lisa","Patrick","Mario","Ida","Sigfrid","Herbert","Hans","Tanja","Maria"];
   var jobTitle=["programmer","developer","consultant","manager"];
+  var i=0;
+  
+  for(i=0;i<10;++i){employees.push(JSON.parse((JSON.stringify(employeeSchema))));}
 
-  for(var i=0;i<10;++i)
-   {employees.push(employeeSchema);
-   	
-    employees[i].properties.id.content=Math.floor(Math.random()*10000*10000);
+  for(i=0;i<10;++i)
+   {
+
+    var seed=Math.random();  	
+    var seed2=Math.random();
+    employees[i].properties.id.content=Math.floor(seed*10000*10000);
     
-    employees[i].properties.firstName.content=firstname[Math.floor(Math.random()*9)];
-    employees[i].properties.lastName.content=lastname[Math.floor(Math.random()*9)];
+    employees[i].properties.firstName.content=firstname[Math.floor(seed*9)];
+    employees[i].properties.lastName.content=lastname[Math.floor(seed2*9)];
     employees[i].properties.email.content=employees[i].properties.firstName.content+"."+employees[i].properties.lastName.content+"@gmail.com";
-    employees[i].properties.jobTitle.content=jobTitle[Math.floor(Math.random()*3)];
-    employees[i].properties.salary.content=Math.floor(Math.random()*5000);
+    employees[i].properties.jobTitle.content=jobTitle[Math.floor(seed*3)];
+    employees[i].properties.salary.content=Math.floor((seed2)*5000)%5000;
     
    }	 
    console.log(JSON.stringify(employees));
