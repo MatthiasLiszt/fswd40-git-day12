@@ -1,8 +1,14 @@
 <html>
 <script src="advanced.js"></script>
 <script src="tabelle.js"></script>
-<body onload="fill10employees()">
+<body>
 <h1>advanced task</h1>
 
+<script>
+fill10employees();
+document.writeln("test "+employees.length+"<br></br>");
+var k=0;
+while(k<10){document.writeln("<p>= "+employees[k++].properties.salary.content+"</p>");};
+</script>
 </body>
 </html>
