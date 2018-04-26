@@ -49,11 +49,11 @@ function fill10employees(){
    	
     employees[i].properties.id.content=Math.floor(Math.random()*10000*10000);
     
-    employees[i].properties.firstName.content=firstname[Math.floor(Math.random*9)];
-    employees[i].properties.lastName.content=lastname[Math.floor(Math.random*9)];
+    employees[i].properties.firstName.content=firstname[Math.floor(Math.random()*9)];
+    employees[i].properties.lastName.content=lastname[Math.floor(Math.random()*9)];
     employees[i].properties.email.content=employees[i].properties.firstName.content+"."+employees[i].properties.lastName.content+"@gmail.com";
-    employees[i].properties.jobTitle.content=jobTitle[Math.floor(Math.random*3)];
-    employees[i].properties.salary.content=Math.floor(Math.random*5000);
+    employees[i].properties.jobTitle.content=jobTitle[Math.floor(Math.random()*3)];
+    employees[i].properties.salary.content=Math.floor(Math.random()*5000);
     
    }	 
    console.log(JSON.stringify(employees));
